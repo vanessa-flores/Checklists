@@ -43,7 +43,13 @@
                             <outlet property="delegate" destination="YWt-53-idc" id="ZZu-Wr-4Mv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists" id="2Rw-tR-tdK"/>
+                    <navigationItem key="navigationItem" title="Checklists" id="2Rw-tR-tdK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wek-DM-WDd">
+                            <connections>
+                                <action selector="addItem" destination="YWt-53-idc" id="GSk-ST-A48"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnS-iK-kSW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
