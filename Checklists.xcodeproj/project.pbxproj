@@ -14,6 +14,7 @@
 		A3B5C8DC24F5535100864F73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3B5C8DB24F5535100864F73 /* Assets.xcassets */; };
 		A3B5C8DF24F5535100864F73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B5C8DD24F5535100864F73 /* LaunchScreen.storyboard */; };
 		A3B5C8E924F5790100864F73 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B5C8E824F5790000864F73 /* ChecklistItem.swift */; };
+		A3B5C8EF24F5B7CF00864F73 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B5C8EE24F5B7CF00864F73 /* AddItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A3B5C8E024F5535100864F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3B5C8E724F553D600864F73 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A3B5C8E824F5790000864F73 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
+		A3B5C8EE24F5B7CF00864F73 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				A3B5C8E624F553AA00864F73 /* Application Delegate */,
 				A3B5C8D624F5535000864F73 /* ChecklistViewController.swift */,
+				A3B5C8EE24F5B7CF00864F73 /* AddItemViewController.swift */,
 				A3B5C8D824F5535000864F73 /* Main.storyboard */,
 				A3B5C8DB24F5535100864F73 /* Assets.xcassets */,
 				A3B5C8DD24F5535100864F73 /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3B5C8EF24F5B7CF00864F73 /* AddItemViewController.swift in Sources */,
 				A3B5C8D724F5535000864F73 /* ChecklistViewController.swift in Sources */,
 				A3B5C8D324F5535000864F73 /* AppDelegate.swift in Sources */,
 				A3B5C8D524F5535000864F73 /* SceneDelegate.swift in Sources */,
