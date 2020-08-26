@@ -63,13 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				A3B5C8E624F553AA00864F73 /* Application Delegate */,
-				A3B5C8D624F5535000864F73 /* ChecklistViewController.swift */,
-				A3B5C8EE24F5B7CF00864F73 /* AddItemViewController.swift */,
-				A3B5C8D824F5535000864F73 /* Main.storyboard */,
+				A3B5C8F024F70C8F00864F73 /* View Controllers */,
+				A3B5C8F124F70C9C00864F73 /* Storyboards */,
+				A3B5C8F224F70CA500864F73 /* Models */,
 				A3B5C8DB24F5535100864F73 /* Assets.xcassets */,
-				A3B5C8DD24F5535100864F73 /* LaunchScreen.storyboard */,
 				A3B5C8E024F5535100864F73 /* Info.plist */,
-				A3B5C8E824F5790000864F73 /* ChecklistItem.swift */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -81,6 +79,32 @@
 				A3B5C8D424F5535000864F73 /* SceneDelegate.swift */,
 			);
 			path = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		A3B5C8F024F70C8F00864F73 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A3B5C8D624F5535000864F73 /* ChecklistViewController.swift */,
+				A3B5C8EE24F5B7CF00864F73 /* AddItemViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A3B5C8F124F70C9C00864F73 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A3B5C8D824F5535000864F73 /* Main.storyboard */,
+				A3B5C8DD24F5535100864F73 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A3B5C8F224F70CA500864F73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A3B5C8E824F5790000864F73 /* ChecklistItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
