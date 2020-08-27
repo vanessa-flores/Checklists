@@ -8,12 +8,21 @@
 
 import UIKit
 
+protocol AddItemViewControllerDelegate: class {
+    func addItemViewControllerDidCancel(_ controller: AddItemViewController)
+    func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem)
+}
+
 class AddItemViewController: UITableViewController, UITextFieldDelegate {
     
     // MARK: - Outlets
     
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet private weak var doneBarButton: UIBarButtonItem!
+    
+    // MARK: - Properties
+    
+    weak var delegate: AddItemViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,18 +41,6 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
         textField.becomeFirstResponder()
     }
     
-    // MARK: - Actions
-    
-    @IBAction private func cancel() {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction private func done() {
-        print("Contents of the text field: \(textField.text!)")
-        
-        navigationController?.popViewController(animated: true)
-    }
-    
     // MARK: - UITextFieldDelegate
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -60,5 +57,18 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
         doneBarButton.isEnabled = false
         
         return true
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction private func cancel() {
+        delegate?.addItemViewControllerDidCancel(self)
+    }
+    
+    @IBAction private func done() {
+        let item = ChecklistItem()
+        item.text = textField.text!
+        
+        delegate?.addItemViewController(self, didFinishAdding: item)
     }
 }
