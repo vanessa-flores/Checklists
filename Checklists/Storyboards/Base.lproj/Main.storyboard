@@ -191,7 +191,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPS-5h-eGk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="-718"/>
+            <point key="canvasLocation" x="841" y="817"/>
         </scene>
         <!--All Lists-->
         <scene sceneID="lea-LD-SnO">
@@ -206,10 +206,16 @@
                             <outlet property="delegate" destination="2tR-KS-Xci" id="vpO-dF-lmt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists" id="dKm-zU-lzF"/>
+                    <navigationItem key="navigationItem" title="Checklists" id="dKm-zU-lzF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ft4-xB-kxg">
+                            <connections>
+                                <segue destination="v5V-P0-P0v" kind="show" identifier="AddChecklist" id="rK5-aW-Dty"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="YWt-53-idc" kind="show" identifier="ShowChecklist" id="G2S-1j-sBG"/>
-                        <segue destination="v5V-P0-P0v" kind="show" id="6SX-AD-5gd"/>
+                        <segue destination="v5V-P0-P0v" kind="show" identifier="EditChecklist" id="6SX-AD-5gd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QMc-FJ-hAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -236,6 +242,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="6SX-AD-5gd"/>
         <segue reference="pS2-I3-fXq"/>
     </inferredMetricsTieBreakers>
 </document>
