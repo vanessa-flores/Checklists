@@ -123,7 +123,7 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddItem" {
+        if segue.identifier == "AddItem" || segue.identifier == "EditItem" {
             let controller = segue.destination as! AddItemViewController
             controller.delegate = self
         }

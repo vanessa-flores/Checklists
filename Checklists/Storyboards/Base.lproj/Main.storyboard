@@ -43,6 +43,9 @@
                                         <constraint firstItem="y0I-Eg-zoO" firstAttribute="centerY" secondItem="oYN-uR-DSU" secondAttribute="centerY" id="Sfv-ao-90t"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="953-Z2-w1s" kind="show" identifier="EditItem" trigger="accessoryAction" id="pS2-I3-fXq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -145,4 +148,7 @@
             <point key="canvasLocation" x="0.80000000000000004" y="8.5457271364317844"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pS2-I3-fXq"/>
+    </inferredMetricsTieBreakers>
 </document>
