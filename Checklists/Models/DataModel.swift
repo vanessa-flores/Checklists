@@ -13,6 +13,7 @@ class DataModel {
     
     init() {
         loadChecklists()
+        registerDefaults()
     }
             
     private func documentsDirectory() -> URL {
@@ -48,5 +49,10 @@ class DataModel {
                 print("Error decoding list array: \(error.localizedDescription)")
             }
         }
+    }
+    
+    private func registerDefaults() {
+        let dictionary = ["ChecklistIndex": -1]
+        UserDefaults.standard.register(defaults: dictionary)
     }
 }
