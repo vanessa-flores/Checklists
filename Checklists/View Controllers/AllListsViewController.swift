@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate {
+class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate, UINavigationControllerDelegate {
     
     // MARK: - Properties
     
@@ -49,6 +49,8 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     // MARK: - UITableViewDelegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        UserDefaults.standard.set(indexPath.row, forKey: "ChecklistIndex")
+        
         let checklist = dataModel.lists[indexPath.row]
         
         performSegue(withIdentifier: "ShowChecklist", sender: checklist)
@@ -102,5 +104,14 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         }
         
         navigationController?.popViewController(animated: true)
+    }
+    
+    // MARK: - UINavigationControllerDelegate
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        // Was the back button tapped?
+        if viewController === self {
+            UserDefaults.standard.set(-1, forKey: "ChecklistIndex")
+        }
     }
 }
