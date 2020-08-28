@@ -321,4 +321,5 @@
         <segue reference="6SX-AD-5gd"/>
         <segue reference="pS2-I3-fXq"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.015686274509803921" green="0.66274509803921566" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
