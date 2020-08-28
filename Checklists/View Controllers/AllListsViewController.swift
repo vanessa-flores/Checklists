@@ -14,6 +14,8 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     
     let cellIdentifier = "ChecklistCell"
     var dataModel: DataModel!
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,19 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         navigationController?.navigationBar.prefersLargeTitles = true
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.delegate = self
+        
+        let index = UserDefaults.standard.integer(forKey: "ChecklistIndex")
+        
+        if index != -1 {
+            let checklist = dataModel.lists[index]
+            performSegue(withIdentifier: "ShowChecklist", sender: checklist)
+        }
     }
     
     // MARK: - UITableViewDataSource
