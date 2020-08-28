@@ -60,7 +60,11 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         tableViewCell.accessoryType = .detailDisclosureButton
         
         let count = checklist.countUncheckedItems()
-        tableViewCell.detailTextLabel!.text = count == 0 ? "All Done" : "\(count) Remaining"
+        if checklist.items.isEmpty {
+            tableViewCell.detailTextLabel!.text = "(No Items)"
+        } else {
+            tableViewCell.detailTextLabel!.text = count == 0 ? "All Done!" : "\(count) Remaining"
+        }
         
         return tableViewCell
     }
