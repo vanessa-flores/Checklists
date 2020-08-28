@@ -18,6 +18,7 @@
 		A3B5C8F624F84D0F00864F73 /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B5C8F524F84D0F00864F73 /* AllListsViewController.swift */; };
 		A3B5C8F824F8537D00864F73 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B5C8F724F8537D00864F73 /* Checklist.swift */; };
 		A3B5C8FA24F85BC200864F73 /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B5C8F924F85BC200864F73 /* ListDetailViewController.swift */; };
+		A3B5C8FC24F9665E00864F73 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B5C8FB24F9665E00864F73 /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A3B5C8F524F84D0F00864F73 /* AllListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
 		A3B5C8F724F8537D00864F73 /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		A3B5C8F924F85BC200864F73 /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
+		A3B5C8FB24F9665E00864F73 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				A3B5C8E824F5790000864F73 /* ChecklistItem.swift */,
 				A3B5C8F724F8537D00864F73 /* Checklist.swift */,
+				A3B5C8FB24F9665E00864F73 /* DataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				A3B5C8E924F5790100864F73 /* ChecklistItem.swift in Sources */,
 				A3B5C8F824F8537D00864F73 /* Checklist.swift in Sources */,
 				A3B5C8FA24F85BC200864F73 /* ListDetailViewController.swift in Sources */,
+				A3B5C8FC24F9665E00864F73 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
