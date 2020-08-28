@@ -118,7 +118,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         return documentsDirectory().appendingPathComponent("Checklists.plist")
     }
 
-    private func saveChecklists() {
+    func saveChecklists() {
         let encoder = PropertyListEncoder()
 
         do {
