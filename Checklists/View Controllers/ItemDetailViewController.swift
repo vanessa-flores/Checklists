@@ -22,12 +22,15 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet private weak var doneBarButton: UIBarButtonItem!
     @IBOutlet private weak var shouldRemindSwitch: UISwitch!
     @IBOutlet private weak var dueDateLabel: UILabel!
+    @IBOutlet private weak var datePickerCell: UITableViewCell!
+    @IBOutlet private weak var datePicker: UIDatePicker!
     
     // MARK: - Properties
     
     weak var delegate: ItemDetailViewControllerDelegate?
     var itemToEdit: ChecklistItem?
     var dueDate = Date()
+    var datePickerVisible = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,5 +108,11 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         formatter.dateStyle = .medium
         formatter.timeStyle = .short
         dueDateLabel.text = formatter.string(from: dueDate)
+    }
+    
+    private func showDatePicker() {
+        datePickerVisible = true
+        let indexPathDatePicker = IndexPath(row: 2, section: 1)
+        tableView.insertRows(at: [indexPathDatePicker], with: .fade)
     }
 }
