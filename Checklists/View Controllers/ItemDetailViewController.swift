@@ -20,6 +20,8 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet private weak var doneBarButton: UIBarButtonItem!
+    @IBOutlet private weak var shouldRemindSwitch: UISwitch!
+    @IBOutlet private weak var dueDateLabel: UILabel!
     
     // MARK: - Properties
     
