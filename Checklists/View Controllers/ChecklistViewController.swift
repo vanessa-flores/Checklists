@@ -32,6 +32,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         
         configureText(for: cell, with: item)
         configureCheckmark(for: cell, with: item)
+        configureDueDate(for: cell, with: item)
         
         return cell
     }
@@ -78,6 +79,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
             let indexPath = IndexPath(row: index, section: 0)
             if let cell = tableView.cellForRow(at: indexPath) {
                 configureText(for: cell, with: item)
+                configureDueDate(for: cell, with: item)
             }
         }
         
@@ -99,6 +101,21 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     private func configureText(for cell: UITableViewCell, with item: ChecklistItem) {
         let label = cell.viewWithTag(1000) as! UILabel
         label.text = item.text
+    }
+    
+    private func configureDueDate(for cell: UITableViewCell, with item: ChecklistItem) {
+        let label = cell.viewWithTag(1002) as! UILabel
+        
+        if item.shouldRemind && item.dueDate > Date() {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            formatter.timeStyle = .short
+            label.text = formatter.string(from: item.dueDate)
+            
+            label.isHidden = false
+        } else {
+            label.isHidden = true
+        }
     }
     
     // MARK: - Navigation
