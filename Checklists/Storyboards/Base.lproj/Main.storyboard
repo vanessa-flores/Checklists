@@ -194,6 +194,9 @@
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="PU5-su-eA7">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="217"/>
+                                <connections>
+                                    <action selector="dateChanged:" destination="953-Z2-w1s" eventType="valueChanged" id="tGI-k5-ckk"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <constraints>
