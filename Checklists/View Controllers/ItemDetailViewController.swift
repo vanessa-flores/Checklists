@@ -170,5 +170,6 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         let indexPathDatePicker = IndexPath(row: 2, section: 1)
         tableView.insertRows(at: [indexPathDatePicker], with: .fade)
         datePicker.setDate(dueDate, animated: false)
+        dueDateLabel.textColor = dueDateLabel.tintColor
     }
 }
