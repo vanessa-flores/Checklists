@@ -30,22 +30,20 @@ class Checklist: NSObject, Codable {
         return count
     }
     
-    func sortChecklistItemsByDate() {
-        var itemsWithFutureDueDates = items.filter { $0.dueDate > Date() }
-        var itemsWithPastDueDates = items.filter { $0.dueDate < Date() }
-        
-        itemsWithFutureDueDates.sort(by: { item1, item2 in
+    func sortByDueDate() {
+        items.sort(by: { item1, item2 in
             return item1.dueDate.compare(item2.dueDate) == .orderedAscending
         })
+    }
+    
+    func sortChecklistItemsByFutureDate() {
+        sortByDueDate()
         
-        itemsWithPastDueDates.sort(by: { item1, item2 in
-            return item1.dueDate.compare(item2.dueDate) == .orderedAscending
-        })
+        let itemsWithFutureDueDate = items.filter { $0.dueDate > Date() }
+        let itemsWithPastDueDate = items.filter { $0.dueDate < Date() }
+
+        items = itemsWithFutureDueDate
+        items.append(contentsOf: itemsWithPastDueDate)
         
-        items = itemsWithFutureDueDates
-        items.append(contentsOf: itemsWithPastDueDates)
-//        items.sort(by: { item1, item2 in
-//            return item1.dueDate.compare(item2.dueDate) == .orderedAscending
-//        })
     }
 }

@@ -66,7 +66,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     func itemDetailViewController(_ controller: ItemDetailViewController, didFinishAdding item: ChecklistItem) {
         let newRowIndex = checklist.items.count
         checklist.items.append(item)
-        checklist.sortChecklistItemsByDate()
+        checklist.sortChecklistItemsByFutureDate()
         
         
         let indexPath = IndexPath(row: newRowIndex, section: 0)
@@ -77,7 +77,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     }
     
     func itemDetailViewController(_ controller: ItemDetailViewController, didFinishEditing item: ChecklistItem) {
-        checklist.sortChecklistItemsByDate()
+        checklist.sortChecklistItemsByFutureDate()
         tableView.reloadData()
         
         navigationController?.popViewController(animated: true)
